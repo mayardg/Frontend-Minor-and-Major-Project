@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechVolution 2024 Registration Form</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+       
+        .my-form {
+            background: floralwhite;
+            padding: 40px;
+            border-radius: 33px;
+            box-shadow: 15px 12px 100px 50px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container my-5">
+        <div class="my-form">
+            <h2 class="text-center mb-5 mt-2">TechVolution 2024 Registration Form</h2>
+            <form id="registrationForm">
+                <!-- Personal Information -->
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" class="form-control" id="dob" required>
+                </div>
+                <div class="form-group">
+                    <label>Gender:</label>
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" id="male" name="gender" value="Male" required>
+                        <label class="form-check-label" for="male">Male</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" id="female" name="gender" value="Female">
+                        <label class="form-check-label" for="female">Female</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" id="nonBinary" name="gender" value="Non-binary">
+                        <label class="form-check-label" for="nonBinary">Non-binary</label>
+                    </div>
+                </div>
+                <!-- Contact Details -->
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="text" class="form-control" id="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="street">Street Address:</label>
+                    <input type="text" class="form-control" id="street" required>
+                </div>
+                <div class="form-group">
+                    <label for="city">City:</label>
+                    <input type="text" class="form-control" id="city" required>
+                </div>
+                <div class="form-group">
+                    <label for="state">State:</label>
+                    <select class="form-control" id="state" required>
+                        <!-- Populate with states -->
+                        <option value="">Select State</option>
+                        <option value="AL">Haryana</option>
+                        <!-- Add more options -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="zip">Zip Code:</label>
+                    <input type="text" class="form-control" id="zip" required>
+                </div>
+                <!-- Additional Information -->
+                <div class="form-group">
+                    <label for="eventPreferences">Event Preferences:</label>
+                    <select class="form-control" id="eventPreferences" multiple required>
+                        <option value="Workshops">Workshops</option>
+                        <option value="Keynotes">Keynotes</option>
+                        <!-- Add more options -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="dietaryRestrictions">Dietary Restrictions:</label>
+                    <textarea class="form-control" id="dietaryRestrictions" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="tshirtSize">T-shirt Size:</label>
+                    <select class="form-control" id="tshirtSize" required>
+                        <option value="">Select Size</option>
+                        <option value="S">Small</option>
+                        <option value="M">Medium</option>
+                        <option value="L">Large</option>
+                        <!-- Add more options -->
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript for form validation and submission -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Client-side form validation using JavaScript
+        $(document).ready(function () {
+            $('#registrationForm').submit(function (event) {
+                event.preventDefault();
+                console.log("Form submitted...", event);
+
+            });
+        });
+    </script>
+</body>
+
+</html>
